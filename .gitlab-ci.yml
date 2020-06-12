@@ -1,0 +1,34 @@
+stages:
+  - build
+  - test
+  - cleanup
+
+build:
+  stage: build
+  image: docker:stable
+  script:
+    - docker build --tag $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA .
+
+puppet test:
+  stage: test
+  image: docker:stable
+  script:
+    - docker run --rm $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA puppet --version
+
+puppet-lint test:
+  stage: test
+  image: docker:stable
+  script:
+    - docker run --rm $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA puppet-lint --version
+
+r10k test:
+  stage: test
+  image: docker:stable
+  script:
+    - docker run --rm $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA r10k --verbose=info version
+
+cleanup:
+  stage: cleanup
+  image: docker:stable
+  script:
+    - docker rmi $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
