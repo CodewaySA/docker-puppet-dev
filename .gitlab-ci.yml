@@ -18,7 +18,7 @@ puppet test:
 puppet strings test:
   stage: test
   image: docker:stable
-  scripts:
+  script:
     - docker run --rm $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA puppet strings --help
 
 puppet-lint test:
