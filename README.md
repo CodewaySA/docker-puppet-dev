@@ -4,6 +4,7 @@ Docker image with Puppet development tools.
 
 Tools included in this image:
 * [Puppet](https://github.com/puppetlabs/puppet)
+* [Puppet strings](https://puppet.com/docs/puppet/7.0/puppet_strings.html)
 * [Puppet-lint](http://puppet-lint.com)
 * [r10k](https://github.com/puppetlabs/r10k)
 * [Ruby](https://www.ruby-lang.org/)
