@@ -1,6 +1,6 @@
 FROM codewaysa/ruby:2.7.1_20201215
 
-LABEL image_name="codewaysa/puppet-dev"
+LABEL image-name="codewaysa/puppet-dev"
 LABEL maintainer="l.lesinigo@codeway.ch"
 
 # redcarpet is needed to run "puppet strings" but is not explicitly depended upon
