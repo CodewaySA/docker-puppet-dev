@@ -7,6 +7,7 @@ Tools included in this image:
 * [Puppet strings](https://puppet.com/docs/puppet/7/puppet_strings.html)
 * [Puppet-lint](http://puppet-lint.com)
 * [Facter](https://github.com/puppetlabs/facter)
+* [Bolt](https://github.com/puppetlabs/bolt)
 * [r10k](https://github.com/puppetlabs/r10k)
 * [Ruby](https://www.ruby-lang.org/)
 
